@@ -5,4 +5,4 @@
 - [개인정보 처리방침](./privacy)
 - [이용약관](./terms)
 
-문의: [viewpin.support@gamil.com]
+문의: [viewpin.support@gmail.com]
