@@ -4,5 +4,6 @@
 
 - [개인정보 처리방침](./privacy)
 - [이용약관](./terms)
+- [커뮤니티 가이드](./community_guidelines)
 
 문의: [viewpin.support@gmail.com]
