@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ViewPin 서비스 소개</title>
+<meta name="description" content="ViewPin — 사진가를 위한 출사지 지도 · 출사 계획 앱">
+<style>
+  :root { --bg:#ffffff; --fg:#1b1d29; --sub:#5b6070; --line:#e4e6ee; --card:#f6f7fb; --accent:#f47b20; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#03051a; --fg:#eef0f8; --sub:#a4a9bd; --line:#23284a; --card:#0d1130; } }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.7 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif; }
+  main { max-width:960px; margin:0 auto; padding:32px 16px 64px; }
+  header { display:flex; align-items:center; gap:14px; margin-bottom:8px; }
+  header img { width:56px; height:56px; border-radius:14px; }
+  h1 { font-size:28px; margin:0; }
+  .tagline { color:var(--sub); margin:4px 0 24px; }
+  h2 { font-size:21px; margin:40px 0 12px; padding-top:16px; border-top:1px solid var(--line); }
+  h3 { font-size:17px; margin:0 0 6px; }
+  table { border-collapse:collapse; width:100%; font-size:15px; }
+  th, td { text-align:left; vertical-align:top; padding:8px 10px; border-bottom:1px solid var(--line); }
+  th { width:30%; color:var(--sub); font-weight:600; }
+  .menu { display:grid; grid-template-columns:200px 1fr; gap:20px; align-items:start; background:var(--card); border-radius:14px; padding:16px; margin:14px 0; }
+  .menu img { width:100%; border-radius:10px; border:1px solid var(--line); display:block; }
+  .menu .shots { display:grid; gap:8px; }
+  .menu ul { margin:6px 0 0; padding-left:20px; }
+  .note { color:var(--sub); font-size:14px; }
+  .links a { color:var(--accent); text-decoration:none; font-weight:600; }
+  .links li { margin:4px 0; }
+  @media (max-width:600px) { .menu { grid-template-columns:1fr; } .menu .shots { grid-template-columns:1fr 1fr; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="images/icon.png" alt="ViewPin 아이콘">
+    <div><h1>ViewPin</h1></div>
+  </header>
+  <p class="tagline">사진가를 위한 출사지(사진 촬영 장소) 지도 · 출사 계획 앱</p>
+
+  <h2>1. 서비스 개요</h2>
+  <table>
+    <tr><th>서비스 형태</th><td>모바일 앱(Android · iOS). 웹 서비스는 없으며, 이 페이지가 서비스 소개 · 정책 안내 페이지입니다.</td></tr>
+    <tr><th>업종 · 콘텐츠</th><td>사진 · 여행 정보 공유 커뮤니티. 이용자가 직접 찍은 풍경 사진과 촬영 장소, 촬영 정보(촬영 시간대 · 카메라 설정 · 주차장 · 물때 · 드론 비행 참고 정보)를 지도 위에 공유하고, 개인 출사 계획을 세우는 서비스입니다.</td></tr>
+    <tr><th>이용 대상</th><td>만 14세 이상 일반 이용자(사진 촬영 · 여행에 관심 있는 사람)</td></tr>
+    <tr><th>요금</th><td>기본 기능 무료. 출시 시 일부 편의 기능(출사 계획 계정에 저장 등)을 앱 마켓(Google Play · App Store) 인앱 구독으로 제공할 예정입니다.</td></tr>
+    <tr><th>전자상거래 여부</th><td>해당 없음. 상품 판매 · 예약 · 청약 · 중개 기능이 없습니다.</td></tr>
+    <tr><th>진행 상태</th><td>개발 완료 후 비공개 베타 테스트 중이며, Google Play · App Store 출시를 준비하고 있습니다.</td></tr>
+  </table>
+
+  <h2>2. 네이버 로그인 사용 목적</h2>
+  <table>
+    <tr><th>사용 위치</th><td>앱 첫 화면의 '네이버로 계속하기' 버튼(구글 · 애플 로그인과 함께 제공). 설정 &gt; 연결된 계정에서 기존 계정에 네이버를 연결할 수도 있습니다.</td></tr>
+    <tr><th>받는 정보</th><td>이메일 주소, 별명(닉네임), 네이버 회원 식별값</td></tr>
+    <tr><th>이용 목적</th><td>회원 식별 · 로그인, 프로필의 기본 이름(이용자가 언제든 바꿀 수 있음). 프로필 사진 등 그 밖의 정보는 받지 않습니다.</td></tr>
+    <tr><th>탈퇴</th><td>앱 설정 &gt; 회원 탈퇴 시 계정과 연결 정보가 즉시 삭제됩니다.</td></tr>
+  </table>
+
+  <h2>3. 메뉴별 기능</h2>
+
+  <div class="menu">
+    <div class="shots"><img src="images/00_login.jpg" alt="로그인 화면"></div>
+    <div>
+      <h3>① 로그인</h3>
+      <ul>
+        <li>네이버 · Google · Apple 계정으로 가입 · 로그인합니다.</li>
+        <li>처음 가입할 때 만 14세 이상 확인과 이용약관 동의를 받습니다.</li>
+        <li>'로그인 없이 둘러보기'로 게시물 보기만 할 수 있습니다(올리기 · 좋아요 · 계획 등은 로그인 필요).</li>
+        <li>이용약관 · 개인정보 처리방침 · 커뮤니티 가이드를 로그인 전에도 볼 수 있습니다.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="menu">
+    <div class="shots"><img src="images/01_home.jpg" alt="탐색 화면"></div>
+    <div>
+      <h3>② 탐색 (첫 탭)</h3>
+      <ul>
+        <li>이용자들이 올린 출사지를 지역별(서울 · 담양 · 오사카 등) · 카테고리별(풍경 · 건축 · 야생동물 · 폭포 등)로 모아 보여 줍니다.</li>
+        <li>타일을 누르면 그 지역 · 카테고리의 게시물 목록으로 이동합니다.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="menu">
+    <div class="shots"><img src="images/02_map_sun.jpg" alt="지도 화면"></div>
+    <div>
+      <h3>③ 지도</h3>
+      <ul>
+        <li>출사지 게시물을 지도 위 핀으로 보여 줍니다. 국내는 네이버 지도, 해외는 구글 지도를 자동으로 사용합니다.</li>
+        <li>태양 · 달 버튼: 지도 위에 일출 · 일몰(월출 · 월몰) 방향선과 시각을 표시해 촬영 방향을 미리 확인할 수 있습니다.</li>
+        <li>지도 보기 종류(기본 · 위성 · 지형), 정확한 위치 핀 / 구역 핀 전환.</li>
+        <li>이용자의 현재 위치는 지도 표시에만 쓰며 서버에 저장하지 않습니다.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="menu">
+    <div class="shots"><img src="images/03_feed.jpg" alt="피드 화면"><img src="images/04_detail.jpg" alt="게시물 상세 화면"></div>
+    <div>
+      <h3>④ 피드 · 게시물 보기</h3>
+      <ul>
+        <li>피드: 새로 올라온 출사지 사진을 최신 순으로 보여 줍니다. 좋아요 · 북마크를 할 수 있습니다.</li>
+        <li>게시물 보기: 사진, 설명, 카테고리 · 태그, 촬영 정보(촬영 모드 · ISO · 조리개 · 셔터 속도 · 날짜), 촬영하기 좋은 시간대, 주차장, 드론 비행 참고 정보, 그 장소의 날씨 예보(16일) · 물때, 촬영 위치 지도.</li>
+        <li>길찾기: 네이버 지도 · 카카오맵 · 구글 지도 앱으로 연결합니다.</li>
+        <li>더보기: 신고 · 작성자 차단(남의 게시물), 수정 · 삭제(내 게시물).</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="menu">
+    <div class="shots"><img src="images/05_search.jpg" alt="검색 화면"></div>
+    <div>
+      <h3>⑤ 검색</h3>
+      <ul>
+        <li>지역 이름 · 카테고리 · 태그 · 작가 이름으로 출사지를 찾습니다.</li>
+        <li>검색 전에는 설정한 선호 카테고리의 최신 게시물을 보여 줍니다.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="menu">
+    <div class="shots"><img src="images/06_upload.jpg" alt="게시물 올리기 화면"><img src="images/06_upload2.jpg" alt="게시물 올리기 입력 항목"></div>
+    <div>
+      <h3>⑥ 게시물 올리기 (오른쪽 위 +)</h3>
+      <ul>
+        <li>직접 촬영한 사진(여러 장)을 고르고 비율 · 위치를 편집합니다.</li>
+        <li>설명, 메인 카테고리, 태그, 촬영 위치(지도를 눌러 지정), 주차장, 물때 · 드론 정보, 촬영 정보를 입력합니다.</li>
+        <li>사진 속 위치 정보(GPS 등 EXIF)는 지우고 저장합니다.</li>
+        <li>사진 칸 아래에 '직접 촬영한 사진만 · 일반인 얼굴과 개인정보는 블러 처리하거나 가려서 업로드' 안내와 커뮤니티 가이드 링크가 있습니다.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="menu">
+    <div class="shots"><img src="images/08_plan.jpg" alt="출사 계획 화면"><img src="images/07_pinpick.jpg" alt="핀 위치 지정 화면"></div>
+    <div>
+      <h3>⑦ 내 출사 계획 (메뉴)</h3>
+      <ul>
+        <li>가고 싶은 장소를 지도에서 찍어 핀으로 저장하고, 여러 핀을 묶어 출사 계획(날짜 · 순서)을 만듭니다.</li>
+        <li>핀마다 그날의 일출 · 일몰 · 골든아워, 시간별 날씨, 물때를 보여 줍니다.</li>
+        <li>계획 지도에서 순서대로 길찾기 앱을 열 수 있고, 다녀온 뒤 방문 기록(사진 · 메모)을 남깁니다.</li>
+        <li>계획은 기본적으로 이용자의 기기에만 저장됩니다.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 style="margin-top:24px">⑧ 그 밖의 메뉴</h3>
+  <ul>
+    <li><b>알림</b>: 내 게시물 좋아요, 새 팔로워, 팔로우한 작가의 새 게시물, 운영자 공지, 문의 답변</li>
+    <li><b>북마크 · 팔로우</b>: 저장한 게시물과 팔로우한 작가 목록</li>
+    <li><b>프로필</b>: 내 사진 모음, 프로필 이름 · 사진 편집</li>
+    <li><b>설정</b>: 선호 카테고리, 알림, 사용 통계, 화면 테마, 언어(한국어 · English · 日本語 · 繁體中文), 권한, 연결된 계정, 차단한 사용자, 회원 탈퇴</li>
+    <li><b>문의</b>: 앱에서 운영자에게 문의를 보내고 답변을 받습니다.</li>
+    <li><b>운영 · 신고 처리</b>: 신고된 게시물은 운영자가 확인해 숨기거나 삭제하며, 서로 다른 3명 이상이 신고하면 자동으로 숨겨집니다.</li>
+  </ul>
+
+  <h2>4. 정책 · 문의</h2>
+  <ul class="links">
+    <li><a href="./privacy">개인정보 처리방침</a></li>
+    <li><a href="./terms">이용약관</a></li>
+    <li><a href="./community_guidelines">커뮤니티 가이드</a></li>
+    <li><a href="./delete_account">계정 삭제 요청</a></li>
+  </ul>
+  <p>문의: <a href="mailto:viewpin.support@gmail.com">viewpin.support@gmail.com</a></p>
+  <p class="note">화면은 개발 중인 앱(베타)이며 출시 전에 일부 바뀔 수 있습니다.</p>
+</main>
+</body>
+</html>
