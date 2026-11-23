@@ -28,6 +28,13 @@
   .links a { color:var(--accent); text-decoration:none; font-weight:600; }
   .links li { margin:4px 0; }
   @media (max-width:600px) { .menu { grid-template-columns:1fr; } .menu .shots { grid-template-columns:1fr 1fr; } }
+  @media print {
+    main { padding-top:0; }
+    h2 { break-after:avoid; }
+    .menu { break-inside:avoid; grid-template-columns:290px 1fr; }
+    .menu .shots { grid-template-columns:140px 140px; }
+    .menu .shots:has(img:only-child) { grid-template-columns:140px; }
+  }
 </style>
 </head>
 <body>
@@ -162,8 +169,7 @@
     <li><a href="./community_guidelines">커뮤니티 가이드</a></li>
     <li><a href="./delete_account">계정 삭제 요청</a></li>
   </ul>
-  <p>문의: <a href="mailto:viewpin.support@gmail.com">viewpin.support@gmail.com</a></p>
-  <p class="note">화면은 개발 중인 앱(베타)이며 출시 전에 일부 바뀔 수 있습니다.</p>
+  <p>문의: <a href="mailto:viewpin.support@gmail.com">viewpin.support@gmail.com</a><br><span class="note">화면은 개발 중인 앱(베타)이며 출시 전에 일부 바뀔 수 있습니다.</span></p>
 </main>
 </body>
 </html>
