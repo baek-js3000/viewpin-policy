@@ -28,8 +28,11 @@
   .links a { color:var(--accent); text-decoration:none; font-weight:600; }
   .links li { margin:4px 0; }
   @media (max-width:600px) { .menu { grid-template-columns:1fr; } .menu .shots { grid-template-columns:1fr 1fr; } }
+  @page { margin:12mm; }
   @media print {
-    main { padding-top:0; }
+    main { padding-top:0; padding-bottom:0; }
+    h2 { margin:24px 0 10px; }
+    .menu { margin:10px 0; }
     h2 { break-after:avoid; }
     .menu { break-inside:avoid; grid-template-columns:290px 1fr; }
     .menu .shots { grid-template-columns:140px 140px; }
